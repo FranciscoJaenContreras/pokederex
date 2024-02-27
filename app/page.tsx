@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Suspense } from 'react'
+import PokemonCarousel from './ui/PokemonCarousel'
+import { PokemonCarouselSqueleton } from './ui/Squeletons'
 
 export default async function Home() {
 
@@ -39,11 +42,11 @@ export default async function Home() {
     width={1920}
     src="/pokedex.jpeg"
   />  
-  {/* <div className=" flex items-center justify-center absolute inset-0">
+  <div className=" flex items-center justify-center absolute inset-0">
     <Suspense fallback={<PokemonCarouselSqueleton />}>
       <PokemonCarousel />
     </Suspense>
-  </div> */}
+  </div>
             
           </div>
         </div>
